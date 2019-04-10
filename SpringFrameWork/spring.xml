@@ -1,0 +1,83 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> <!-- default-init-method="initialize" default-destroy-method="close" -->
+
+
+	<bean id="triangle_collection1" class="com.point.Triangle"
+		abstract="true"> <!-- init-method="initialize" destroy-method="close" -->
+		<property name="points">
+			<list>
+				<ref bean="pointA" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="triangle_collection" class="com.point.Triangle" parent="triangle_collection1">
+		<property name="points">
+			<list merge="true">
+				<ref bean="pointB" />
+			</list>
+		</property>
+	</bean>
+
+
+
+	<!-- <bean class="com.point.BeanProcess"></bean> -->
+
+
+	<!-- <bean id ="triangle_collection" class="com.point.Triangle"> <property 
+		name="points"> <list> <ref bean="pointA"/> <ref bean="pointB"/> <ref bean="pointC"/> 
+		</list> </property> </bean> -->
+
+
+
+	<!-- <bean id="triangle4" class="com.point.Triangle" parent="parent"> <property 
+		name="pointA"> <bean class="com.point.Point"> <property name="x" value="0" 
+		/> <property name="y" value="0" /> </bean> </property> <property name="pointB" 
+		ref="pointB"></property> <property name="pointC" ref="pointC"></property> 
+		</bean> -->
+
+	<!-- <bean id="triangle" class="com.point.Triangle" autowire="byName"> </bean> 
+		<bean id="parent" class="com.point.Triangle"> <property name="pointA" ref="pointA"></property> 
+		</bean> <bean id="triangle2" class="com.point.Triangle" parent="parent"> 
+		<property name="pointB" ref="pointB"></property> <property name="pointC" 
+		ref="pointC"></property> </bean> <bean id="triangle3" class="com.point.Triangle" 
+		parent="parent"> <property name="pointB" ref="pointB"></property> </bean> -->
+
+
+	<bean id="pointA" class="com.point.Point">
+		<property name="x" value="${points.PointA}" />
+		<property name="y" value="${points.PointB}" />
+	</bean>
+
+	<bean id="pointB" class="com.point.Point">
+		<property name="x" value="10" />
+		<property name="y" value="20" />
+	</bean>
+
+	<bean id="pointC" class="com.point.Point">
+		<property name="x" value="30" />
+		<property name="y" value="40" />
+	</bean>
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="prop.properties"></property>
+	</bean>
+	<bean class="com.point.BeanFactoryClass"></bean>
+	<alias name="triangle4" alias="triangle4-alis" />
+
+
+	<bean id="circle" class="com.spring.creation.Circle" scope="singleton">
+		<property name="type" value="Circle Class"></property>
+		<constructor-arg index="1" value="30"></constructor-arg>
+		<constructor-arg value="Circle1"></constructor-arg>
+	</bean>
+
+
+	<bean id="triangle" class="com.spring.creation.Triangle">
+	</bean>
+</beans> 

@@ -1,0 +1,54 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+    default-autowire-candidates="*Impl,*Dao"
+    >
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    	
+    
+    
+    
+    
+    
+    
+    
+    <!-- <context:component-scan base-package="com.annotation.diff"/> -->
+    <!-- <context:annotation-config/> -->
+    
+     <!--  <bean id = "customResource" class="com.resourcr.loading.CustomResourceLoader" ></bean> -->
+      <!-- <bean id = "customResource" class="com.resourcr.loading.CustomResourceLoader" >
+       <property name="resource">
+         <value>classpath:prop.properties</value>
+       </property>
+      </bean> -->
+    
+
+    <!--  <bean id = "baenA" class="com.annotation.diff.BeanA" autowire-candidate="false">
+       <constructor-arg>
+         <ref  bean="baenB" />
+       </constructor-arg>
+     </bean>   autowire="constructor" 
+
+     <bean id = "baenB" class="com.annotation.diff.BeanB" ></bean>
+     
+     <bean id = "baenC" class="com.annotation.diff.BeanC" ></bean>
+
+ 
+ <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor">
+    <property name="requiredParameterValue" value="false" />
+</bean> -->
+
+</beans>

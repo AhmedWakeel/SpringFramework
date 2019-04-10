@@ -1,0 +1,101 @@
+1)ApplicationContextAware is an interface which is used to get the instance of ApplicationContext container which is inside Main method
+ it has a method setApplicationContxt(ApplicationContext context)
+
+2)BeanName interface is usedd to get the bean name of the class which is configure in the xml file it has a method  setBeanName(String name)
+
+3) BeanPostProcessor interface is used to execute a method for all the Object creation before and after Object creation . so needs to create a class 
+  implement the BeanPostProcessor interface and implement it's method postProcessorAfterInitialization postProcessorBeforeInitialization
+  
+ 4) <context:annotation-config/> is used to define all the annotation related beanpostprocessors configuration
+ 5) @Resource(name = "bean name in the xml") if use only @Resource then it will search bean with same name as  center in the xml file . it is jst250 annotation
+ public void setCenter(Point center)
+ {
+ }
+ 
+ 6) @PostConstruct and @PreDestroy annotations are used to call execute the method before and after initialization and after destroying the object
+ 
+ 7) ResourceBundleMessageSource  is class which is used to get the message from the properties file and MessageSource interface is implemented by this class
+    ApplicationContext interface is also extends this interface , this interface has a method getMessage.
+    
+  8) ApplicationListener, ApplicationEventPublisher and ApplicationEvent are the event handling related interfaces
+     ApplicationEventPublisherAware  
+     
+Spring AOP 
+
+
+Servlet API interfaces
+
+Servlet
+ServletRequest
+ServletResponse
+RequestDispatcher
+ServletConfig
+ServletContext
+SingleThreadModel
+Filter
+FilterConfig
+FilterChain
+ServletRequestListener
+ServletRequestAttributeListener
+ServletContextListener
+ServletContextAttributeListener
+
+
+Classess
+
+GenericServlet
+ServeltInputStream
+ServletOutputStream
+ServletRequestWrapper
+ServletResponseWrapper
+ServletRequetEvent
+ServletContextEvent
+ServletRequestAttributeListener
+ServletContextAttributeListener
+ServletException
+UnavailableException
+
+
+HttpInterfaces In Servlet API 
+
+HttpServletRequest
+HttpServletResponse
+Session
+HttpSessionListener
+HttpSessionAttributeListener
+HttpSessionBindingListener
+HttpSessionActivationListener
+HttpSessionContext
+
+
+Http Classes
+
+
+HttpServlet
+Cookie
+HttpServletRequestWrapper
+HttpServletResponseWrapper
+HttpSessionEvent
+HttpSessionBindingEvent
+HttpUtils
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
